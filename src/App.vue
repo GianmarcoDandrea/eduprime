@@ -1,5 +1,4 @@
 <script>
-import "@fontsource/fredoka-one";
 import "@fortawesome/fontawesome-free/css/all.css";
 import AppHeader from "./components/AppHeader.vue";
 import AppMain from "./components/AppMain.vue";

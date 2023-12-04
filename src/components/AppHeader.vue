@@ -13,15 +13,15 @@ export default {
 
 <template >
     <header>
-        <div class="container-fluid">
-            <div class=" rigth-section py-3 rigth-section">
+        <nav class="container-fluid">
+            <div class=" rigth-section rigth-section">
                 <img src="../assets/img/theme_eduprime_logo.png" alt="" class="logo">
             </div>
 
             <div class="left-section">
                 <ul class="link-list">
-                    <li v-for="menu in store.headerLinkMenu" class="link-menu-list">
-                        <a href="" class="text-decoration-none link-menu">
+                    <li v-for="menu in store.headerLinkMenu">
+                        <a href="" class="text-decoration-none">
                             {{ menu }} <i class="fa-solid fa-caret-down"></i>
                         </a>
                     </li>
@@ -32,30 +32,78 @@ export default {
                     </li>
                 </ul>
 
-                <a class="view-btn rounded-5">
+                <button class="view-btn rounded-5 text-decoration-none">
                     VIEW COURSES
-                </a>
+                </button>
             </div>
 
+        </nav>
+
+        <div class="hero position-relative">
+            <div class="container">
+                <div class="wrapper">
+
+                    <div class="hero-title">
+                        Key To Your Success  
+                    </div>
+    
+                    <div class="hero-text">
+                        EduPrime is the most versitile WordPress theme for educational purpose, showcasing universities, courses, secondary schools, etc.
+                    </div>
+                    <div class="hero-btn">
+                        <button class="search-btn rounded-5">
+                            <span>
+                                <i class="fa-solid fa-magnifying-glass me-1"></i>
+                            </span>
+                            Search courses
+                        </button>
+
+                        <button class="apply-btn rounded-5">
+                            <span>
+                                <i class="fa-solid fa-user-plus"></i>
+                            </span>
+                            Apply for university
+                        </button>
+                    </div>
+
+                </div>
+
+
+            </div>
+            <div class="side-menu position-absolute rounded-end">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <i class="fa-solid fa-book-open"></i>
+                <i class="fa-solid fa-gear"></i>
+    
+            </div>
         </div>
 
+        <div class="bottom-wave">
+            <img src="../assets/img/Wave-1.png" alt="">
+        </div>
+
+
     </header>
+
 </template>
 
 <style lang="scss" scoped>
 @use "../style/partials/variables" as *;
 @use "../style/partials/mixins" as *;
-// reset settings
 
-ol, ul, dl {
+// reset settings
+ul{
 margin:0;
 }
 
 header {
-    background-color: $bg_color_4;
-    font-family: $title-family;
+    background-image:
+    linear-gradient($bg_color_5, $bg_color_5,),
+    url(../assets/img/theme_slider2_bg-1.jpg);
+    background-size: contain;
 
-    .container-fluid {
+    nav {
+        font-family: $title-family;
         width: 90%;
         @include flex(row, space-between, center);
         .rigth-section {
@@ -70,7 +118,7 @@ header {
                 font-size: 0.9rem;
         
                 li {
-                    margin: 0 0.5rem;
+                    margin: 0 0.65rem;
                 }
                 
                 a {
@@ -84,20 +132,96 @@ header {
     
                 li:first-of-type a:first-child {
                     color:$text_color_2;
-                }       
+                }    
+                
             }
 
             .view-btn {
                 font-size: 0.9rem;
                 margin-left: 1.5rem;
-                padding: 0.9rem 1.75rem;
-                text-decoration: none;
+                padding: 1rem 2rem;
                 color:$text_color_1;
                 background-color: $bg_color_3;
+                transition: all 0.3s;
+                border: none;
+
+                &:hover {
+                    background-color: $bg_color_1;
+                    color: $text_color_3;
+                    transition: all 0.3s;
+                }
 
             }
 
         }
+    }
+
+    .hero {
+        @include flex(row, center, center);
+        .container {
+            @include flex(column, center, center);
+            margin-top: 3rem;
+            .wrapper {
+                @include flex(column, center, center);
+                margin-top: 3rem;
+                width: 50%;
+                .hero-title {
+                    margin-top: 3rem;
+                    color: $text_color_1;
+                    font-family: $title-family;
+                    font-size: 3.5rem;
+                }
+                .hero-text {
+                    padding-top: 1.5rem;
+                    padding-bottom: 2rem;
+
+                    color: $text_color_1;
+                    font-size: 1.2rem;
+                    text-align: center;
+                }
+
+                .hero-btn {
+                    @include flex(row, center, center);
+                    padding: 1rem 0;
+                    gap: 2rem;
+                    margin-bottom: 5rem;
+                    button {
+                        font-family: $title-family;
+                        font-size: 0.9rem;
+                        border: none;
+                        background-color: rgba(0,0,0,0);
+                        padding: 1.3rem 2.3rem;
+                    }
+
+                    .search-btn {
+                        background-color: $bg_color_3;
+                        color: $text_color_1;
+                    }
+
+                    .apply-btn {
+                        background-color: $bg_color_1;
+                        color: $text_color_3;
+                    }
+
+                }
+
+            }
+        }
+
+        .side-menu {
+            font-size: 1.15rem;
+            @include flex(column, center, center);
+            padding: 1rem 0.6rem;
+            gap: 1rem;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: $bg_color_3;
+            color: $text_color_1;
+            box-shadow: 0px 0px 15px $text_color_7;
+        }
+
+
     }
 }
     
