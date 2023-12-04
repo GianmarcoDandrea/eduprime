@@ -1,2 +1,13 @@
+@use "./partials/variables" as *;
+@use "./partials/mixins" as *;
+@import '@fontsource/fredoka-one';
+@import '@fontsource-variable/fredoka';
+@import 'bootstrap/scss/bootstrap.scss';
 
+// RESET
+img {
+    max-width: 100%;
+}
+
+// COMMON
 

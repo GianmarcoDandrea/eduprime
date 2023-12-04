@@ -1,8 +1,9 @@
 <script>
-import '@fontsource/fredoka-one';
+import "@fontsource/fredoka-one";
+import "@fortawesome/fontawesome-free/css/all.css";
 import AppHeader from "./components/AppHeader.vue";
 import AppMain from "./components/AppMain.vue";
-import AppFooter from './components/AppFooter.vue';
+import AppFooter from "./components/AppFooter.vue";
 
 export default {
   components : {AppFooter, AppHeader, AppMain}
@@ -19,6 +20,5 @@ export default {
 
 <style lang="scss">
 @use "./style/general.scss" as *;
-@use "./style/partials/variables" as *;
 
 </style>
