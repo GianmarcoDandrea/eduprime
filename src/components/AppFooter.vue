@@ -99,12 +99,12 @@ export default {
         </div>
 
         <div class="float-menu position-absolute">
-            <a class="menu-item">
+            <a href="" class="menu-item">
                 <img src="../assets/svg/svg-3.svg" alt="">
                 <span>Purchase Theme</span>
             </a>
 
-            <a class="menu-item">
+            <a href="" class="menu-item">
                 <img src="../assets/svg/svg-2.svg" alt="">
                 <span>Releted Themes</span>
             </a>

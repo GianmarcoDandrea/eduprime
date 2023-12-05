@@ -68,8 +68,8 @@ export default {
   width: 3%;
   aspect-ratio: 1;
   z-index: 999;
-  bottom: 15px;
-  right: 15px;
+  bottom: 20px;
+  right: 20px;
   border-radius: 50%;
 }
 
