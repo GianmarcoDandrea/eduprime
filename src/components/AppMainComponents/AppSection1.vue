@@ -37,6 +37,7 @@ export default {
     background-image: url(../../assets/img/home-background.png);
     background-size: cover;
     background-repeat: no-repeat;
+    padding-bottom: 2rem;
 
     .container-fluid {
         width: 65%;
@@ -51,7 +52,7 @@ export default {
             }
             .title {
                 font-family: $title-family;
-                font-size: 2rem;
+                font-size: 2.5rem;
                 color: $text_color_5;
             }
 
