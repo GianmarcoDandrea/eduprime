@@ -19,6 +19,24 @@ export default {
             "Contact",
             "Purchase"
         ],
+      },
+      footerNavItem : {
+        getEduPrime: [
+          "Request a website",
+          "Browse Themes",
+          "Payment options",
+          "Support System",
+          "Checkout",
+          "Purchase Theme"
+        ],
+        networking: [
+          "Purchese Themse",
+          "Our Benefits",
+          "Our Team",
+          "Our Services",
+          "Other Product",
+          "My Account"
+        ]
       }
     }
 },
@@ -28,13 +46,32 @@ export default {
 </script>
 
 <template>
-  <AppHeader :item="headerNavItem"/>
+  <a href="#AppHeader" class="back-to-top">
+    <img src="../src/assets/img/back-to-top-arrow.svg" alt="">
+  </a>
+  <AppHeader :item="headerNavItem" id="AppHeader"/>
   <AppMain />
-  <AppFooter />
+  <AppFooter :item="footerNavItem"/>
+
 
 </template>
 
 <style lang="scss">
 @use "./style/general.scss" as *;
+@use "./style/partials/variables" as *;
+@use "./style/partials/mixins" as *;
+
+.back-to-top {
+  @include flex(row, center, center);
+  background-color: $bg_color_3;
+  position: fixed;
+  width: 3%;
+  aspect-ratio: 1;
+  z-index: 999;
+  bottom: 15px;
+  right: 15px;
+  border-radius: 50%;
+}
+
 
 </style>

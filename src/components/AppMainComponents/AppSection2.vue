@@ -26,7 +26,7 @@ export default {
             A single university with a load of courses, tailored to satisfy any student's need.
         </div>
 
-        <div class="faculty-list">
+        <div class="faculty-list ">
             <div class="wrapper">
                 <div class="faculty-card position-relative"
                 v-for="(card , i) in store.facultyList"
@@ -44,7 +44,8 @@ export default {
                 </div>
             </div>
         </div>
-        <div class="faculty-details">
+
+        <div class="faculty-details mb-4 pt-4">
             <div class="left-section">
                 <img src="../../assets/img/Gavel-Illustration-e1556884768193.png" alt="">
             </div>
@@ -62,8 +63,7 @@ export default {
             </div>
         </div>
 
-        <div class="bottom-wave">
-            <img src="../../assets/svg/svg-0.svg" alt="">
+        <div class="bottom-wave ">
         </div>
 
     </main>
@@ -172,10 +172,9 @@ main {
     }
 
     .bottom-wave {
-        width: 100%;
-        img{
-            width: 100%;
-        };
+        background-image: url(../../assets/svg/svg-0.svg);
+        height: 17.5vh;
+        background-size: cover;
     }
     
 }

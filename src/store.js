@@ -1,6 +1,8 @@
 import {reactive} from "vue";
 
 export const store = reactive({
+
+    eduPrimeDescription: "EduPrime is the most versitile WordPress theme for educational purpose, showcasing universities, courses, secondary schools, etc.",
     
     facultyList: [
         {
@@ -34,5 +36,15 @@ export const store = reactive({
             details:"Learning from world-leadin academics and pratictioners, you'll not only receive an outstanding grounding in the theory of graphic design, but you will be able to understand how those principles are applied in practice through a range of student-led activities and competitions."
         },
         
+    ],
+
+    categoriesList: [
+        "economy",
+        "design",
+        "coaching",
+        "business",
+        "medicine",
+        "law",
+        "fitness"
     ]
 })

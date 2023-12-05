@@ -51,7 +51,7 @@ export default {
                     </div>
     
                     <div class="hero-text">
-                        EduPrime is the most versitile WordPress theme for educational purpose, showcasing universities, courses, secondary schools, etc.
+                        {{ store.eduPrimeDescription }}
                     </div>
                     <div class="hero-btn">
                         <button class="search-btn rounded-5">
