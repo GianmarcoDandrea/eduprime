@@ -7,7 +7,7 @@ import AppFooter from "./components/AppFooter.vue";
 export default {
   data() {
     return {
-      link : {
+      headerNavItem : {
         headerLinkMenu: [
             "Home",
             "Courses",
@@ -28,7 +28,7 @@ export default {
 </script>
 
 <template>
-  <AppHeader :item="link"/>
+  <AppHeader :item="headerNavItem"/>
   <AppMain />
   <AppFooter />
 

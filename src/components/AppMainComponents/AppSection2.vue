@@ -46,9 +46,24 @@ export default {
         </div>
         <div class="faculty-details">
             <div class="left-section">
-
+                <img src="../../assets/img/Gavel-Illustration-e1556884768193.png" alt="">
             </div>
-            <div class="right-section"></div>
+            <div class="right-section">
+                <div class="title">
+                    Law Faculty
+                </div>
+                <div class="text">
+                    Learning from world-leadin academics and pratictioners, you'll not only receive an outstanding grounding in the theory of law, but you will be able to understand how those principles are applied in practice through a range of student-led activities and competitions.
+                </div>
+
+                <button class="rounded-5">
+                    Read more
+                </button>
+            </div>
+        </div>
+
+        <div class="bottom-wave">
+            <img src="../../assets/svg/svg-0.svg" alt="">
         </div>
 
     </main>
@@ -132,13 +147,35 @@ main {
     }
 
     .faculty-details {
-        width: 60%;
+        @include flex(row,center,center);
+        width: 55%;
+        margin: auto;
         .left-section{
             width: 50%;
         }
         .right-section {
             width: 50%;
+            .text {
+                color: $text_color_4;
+            }
+
+            button {
+                font-family: $title-family;
+                padding: 1rem 1.5rem;
+                border: 0;
+                background-color: $bg_color_4;
+                color: $text_color_1;
+                margin-top: 2rem;
+
+            }
         }
+    }
+
+    .bottom-wave {
+        width: 100%;
+        img{
+            width: 100%;
+        };
     }
     
 }
