@@ -5,13 +5,30 @@ import AppMain from "./components/AppMain.vue";
 import AppFooter from "./components/AppFooter.vue";
 
 export default {
+  data() {
+    return {
+      link : {
+        headerLinkMenu: [
+            "Home",
+            "Courses",
+            "About Us",
+            "News",
+            "Pages",
+        ],
+        headerLinkList : [
+            "Contact",
+            "Purchase"
+        ],
+      }
+    }
+},
   components : {AppFooter, AppHeader, AppMain}
 }
 
 </script>
 
 <template>
-  <AppHeader />
+  <AppHeader :item="link"/>
   <AppMain />
   <AppFooter />
 

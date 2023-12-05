@@ -2,6 +2,9 @@
 import {store} from "../store";
 
 export default {
+    props : {
+        item: Object,
+    },
     data() {
     return {
         store,
@@ -20,12 +23,12 @@ export default {
 
             <div class="left-section">
                 <ul class="link-list">
-                    <li v-for="menu in store.headerLinkMenu">
+                    <li v-for="menu in item.headerLinkMenu">
                         <a href="" class="text-decoration-none">
                             {{ menu }} <i class="fa-solid fa-caret-down"></i>
                         </a>
                     </li>
-                    <li v-for="link in store.headerLinkList">
+                    <li v-for="link in item.headerLinkList">
                         <a href="" class="text-decoration-none">
                             {{ link }}
                         </a>
