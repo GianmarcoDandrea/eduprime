@@ -66,8 +66,7 @@ export default {
   @include flex(row, center, center);
   background-color: $bg_color_3;
   position: fixed;
-  width: 3%;
-  aspect-ratio: 1;
+  padding: 0.8rem;
   z-index: 999;
   bottom: 20px;
   right: 20px;
