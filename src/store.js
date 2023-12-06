@@ -46,5 +46,7 @@ export const store = reactive({
         "medicine",
         "law",
         "fitness"
-    ]
+    ],
+
+    facultyActive: [],
 })

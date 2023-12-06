@@ -7,11 +7,22 @@ export default {
         activeItem: 0,
     };
   },  
+
+  created() {
+    this.store.facultyActive = store.facultyList[0]
+  },
   
   methods: {
     getImagePath(imageName) {
         return new URL(`../../assets/img/${imageName}`, import.meta.url).href
+    },
+
+    changeFaculty(elem, i) {
+        this.activeItem = i,
+        console.log(store.facultyActive);
+        this.store.facultyActive = elem;
     }
+
   }       
 }
 </script>
@@ -31,10 +42,11 @@ export default {
                 <div class="faculty-card position-relative"
                 v-for="(card , i) in store.facultyList"
                 :key="i"
-                :class="{ active: i === activeItem}"
-                @click="activeItem = i">
-                    <div class="card-image" 
-                        >
+                @click="changeFaculty(card , i)"
+                :class="{ active: i === activeItem}">
+
+                    <div class="card-image">
+
                         <img :src="getImagePath(card.image)" alt="" class="faculty-image">
                         
                         <p class="faculty-name">
@@ -47,14 +59,14 @@ export default {
 
         <div class="faculty-details mb-4 pt-4">
             <div class="left-section">
-                <img src="../../assets/img/Gavel-Illustration-e1556884768193.png" alt="">
+                <img :src="getImagePath(store.facultyActive.secondImage)" alt="">
             </div>
             <div class="right-section">
                 <div class="title">
-                    Law Faculty
+                    {{store.facultyActive.name}}
                 </div>
                 <div class="text">
-                    Learning from world-leadin academics and pratictioners, you'll not only receive an outstanding grounding in the theory of law, but you will be able to understand how those principles are applied in practice through a range of student-led activities and competitions.
+                    {{store.facultyActive.details}}
                 </div>
 
                 <button class="rounded-5">
@@ -157,6 +169,7 @@ main {
         .right-section {
             width: 50%;
             .text {
+                padding-top: 2rem;
                 color: $text_color_4;
             }
 
