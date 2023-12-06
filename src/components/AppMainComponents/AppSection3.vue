@@ -130,7 +130,7 @@ export default {
                         </div>
 
                         <div class="card-btn position-absolute">
-                            <button class="rounded-5">
+                            <button>
                                 <i class="fa-solid fa-plus"></i> 
                                 <span>
                                     Find More
@@ -142,7 +142,7 @@ export default {
                 </div>
 
                 <div class="view-btn">
-                    <button class="rounded-5">
+                    <button>
                         View All Events
                     </button>
                 </div>
@@ -250,6 +250,7 @@ main {
                     left: 50%;
                     transform: translate(-50%,50%);
                     button {
+                        border-radius: 50px;
                         padding: 0.5rem 1rem;
                         border: none;
                         background-color: $bg_color_4;
@@ -269,6 +270,7 @@ main {
             button {
                 box-shadow: 0 0 20px #45454550;;
                 border: none;
+                border-radius: 50px;
                 background-color: $bg_color_3;
                 color: $text_color_1;
                 font-family: $title-family;

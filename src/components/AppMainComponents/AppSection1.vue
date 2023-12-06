@@ -73,7 +73,7 @@ export default {
                 padding: 1rem 2rem;
 
                 &:hover {
-                    background-color: $bg_color_4;
+                    background-color: $bg_color_010;
                     transition: all 0.3s;
                 }
             }
