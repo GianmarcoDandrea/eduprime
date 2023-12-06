@@ -122,12 +122,13 @@ main {
                 &:after {
                     content: "";
                     position: absolute;
-                    padding: 1rem;
-                    bottom: -9px;
+                    padding: 0.8rem;
+                    bottom: 0;
                     left: 50%;
-                    transform: translateX(-50%);
+                    transform: 
+                    translate(-50%, 50%)
+                    rotate(45deg);
                     background-color: $bg_color_4;
-                    transform: rotate(45deg);
                 }
 
                 & .faculty-image {
