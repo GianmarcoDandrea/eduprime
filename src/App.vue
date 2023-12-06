@@ -61,6 +61,7 @@ export default {
 @use "./style/partials/variables" as *;
 @use "./style/partials/mixins" as *;
 
+
 .back-to-top {
   @include flex(row, center, center);
   background-color: $bg_color_3;
