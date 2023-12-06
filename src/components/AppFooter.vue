@@ -69,9 +69,9 @@ export default {
             
             <div class="right-section w-33 px-2">
 
-                <div class="search rounded-5 w-75">
-                    <input type="text" placeholder="Search..." class="rounded-5 px-4 py-1">
-                    <button class="rounded-5">
+                <div class="search w-75">
+                    <input type="text" placeholder="Search..." class="px-4 py-1">
+                    <button>
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </button>
                 </div>
@@ -193,8 +193,10 @@ main {
             @include flex(column, center, flex-end);
             .search{
                 background-color: $bg_color_1;
+                border-radius: 50px;
 
                 input {
+                    border-radius: 50px;
                     width: 75%;
                     border: none;
                     background-color: $bg_color_1;
@@ -208,6 +210,7 @@ main {
 
                 button {
                     width: 25%;
+                    border-radius: 50px;
                     aspect-ratio: 1;
                     border: none;
                     background-color: $bg_color_3;
