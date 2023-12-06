@@ -81,8 +81,12 @@ export default {
             </div>
         </div>
 
-        <div class="bottom-wave">
+        <div class="bottom-wave position-relative">
             <img src="../assets/img/Wave-1.png" alt="">
+
+            <div class="pop-up position-absolute">
+                Purchese EduPrime on Envato Marker.
+            </div>
         </div>
 
 
@@ -103,7 +107,8 @@ header {
     background-image:
     linear-gradient($bg_color_5, $bg_color_5,),
     url(../assets/img/theme_slider2_bg-1.jpg);
-    background-size: contain;
+    background-size: cover;
+    background-repeat: no-repeat;
 
     nav {
         font-family: $title-family;
@@ -226,6 +231,34 @@ header {
 
 
     }
+
+    .bottom-wave {
+        .pop-up {
+            text-align: center;
+            left: 30px;
+            bottom: 5px;
+            background-color: $bg_color_012;
+            color: $text_color_1;
+            border-radius: 5px;
+            font-size: 0.7rem;
+            padding: 0.3rem 0.5rem;
+
+            &:after {
+                content: "";
+                position: absolute;
+                padding: 0.2rem;
+                bottom: 0;
+                left: 50%;
+                transform: 
+                translate(-50%, 50%)
+                rotate(45deg);
+                background-color: $bg_color_8;
+                z-index: 0;
+            }
+
+        }
+    }
 }
+
     
 </style>
