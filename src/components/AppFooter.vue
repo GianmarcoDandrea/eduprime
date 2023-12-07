@@ -247,6 +247,14 @@ main {
                             text-transform: uppercase;
                             color: $text_color_1;
                         }
+
+                        &:hover {
+                            background-color: $bg_color_1;
+                            a {
+
+                                color: $text_color_3;
+                            }
+                        }
                     }
 
                 }
