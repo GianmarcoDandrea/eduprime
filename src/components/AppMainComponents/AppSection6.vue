@@ -70,7 +70,7 @@ export default {
     .partners-logos {
         padding-top: 2rem;
         @include flex(row, center, flex-start);
-        gap: 1rem;
+        gap: 2rem;
         .logo {
             height: 8vh;
             width: fit-content;
