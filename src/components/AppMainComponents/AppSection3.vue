@@ -6,17 +6,17 @@ export default {
                 {
                     type: "Coaching Sessions",
                     date: "20 May 21:30 PM",
-                    description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur nostrum minima laboriosam a quos accusantium sunt quae molestiae quam hic debitis, vel illum. Ipsum dolorem cumque alias blanditiis neque rerum!"
+                    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur nostrum minima laboriosam a quos accusantium sunt quae molestiae quam hic debitis, vel illum. Ipsum dolorem cumque alias blanditiis neque rerum!"
                 },
                 {
                     type: "Coaching Sessions",
                     date: "24 May 18:00 PM",
-                    description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur nostrum minima laboriosam a quos accusantium sunt quae molestiae quam hic debitis, vel illum. Ipsum dolorem cumque alias blanditiis neque rerum!"
+                    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur nostrum minima laboriosam a quos accusantium sunt quae molestiae quam hic debitis, vel illum. Ipsum dolorem cumque alias blanditiis neque rerum!"
                 },
                 {
                     type: "Coaching Sessions",
                     date: "12 Feb 13:30 PM",
-                    description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur nostrum minima laboriosam a quos accusantium sunt quae molestiae quam hic debitis, vel illum. Ipsum dolorem cumque alias blanditiis neque rerum!"
+                    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur nostrum minima laboriosam a quos accusantium sunt quae molestiae quam hic debitis, vel illum. Ipsum dolorem cumque alias blanditiis neque rerum!"
                 }
 
             ]
@@ -48,13 +48,13 @@ export default {
                 <div class="icon">
                     <img src="../../assets/img/Clock-and-Bell.png" alt="">
                 </div>
-    
+
                 <div class="section-title">
                     <p class="top-section-title">
                         University Year
                     </p>
                 </div>
-    
+
                 <div class="container time-line">
                     <div class="top">
                         <div class="description">
@@ -62,45 +62,49 @@ export default {
                                 Demo Class
                             </div>
                             <div class="text">
-                                In the first week, students try to accomodatewith the teaching style and choose their optional course.
+                                In the first week, students try to accomodatewith the teaching style and choose their
+                                optional course.
                             </div>
                         </div>
-    
+
                         <div class="description">
                             <div class="title">
                                 Graduation Day
                             </div>
                             <div class="text">
-                                On the day of the graduation, all students gather for the ceremony and then network and party among others.
+                                On the day of the graduation, all students gather for the ceremony and then network and
+                                party among others.
                             </div>
                         </div>
-    
+
                     </div>
-    
+
                     <div class="timeline-img">
                         <img src="../../assets/img/Timeline-Item.png" alt="">
                     </div>
-    
+
                     <div class="bottom">
                         <div class="description">
                             <div class="title">
                                 Orentation
                             </div>
                             <div class="text">
-                                First day of the University year, all students gather for the opening ceremony and then network with others.
+                                First day of the University year, all students gather for the opening ceremony and then
+                                network with others.
                             </div>
                         </div>
-    
+
                         <div class="description">
                             <div class="title">
                                 Evaluation
                             </div>
                             <div class="text">
-                                At the end of a semester, students take a general evaluation test for every subject they're learning.
+                                At the end of a semester, students take a general evaluation test for every subject they're
+                                learning.
                             </div>
                         </div>
                     </div>
-    
+
                 </div>
             </div>
 
@@ -131,7 +135,7 @@ export default {
 
                         <div class="card-btn position-absolute">
                             <button>
-                                <i class="fa-solid fa-plus"></i> 
+                                <i class="fa-solid fa-plus"></i>
                                 <span>
                                     Find More
                                 </span>
@@ -148,7 +152,7 @@ export default {
                 </div>
             </div>
 
-            
+
         </div>
     </main>
 
@@ -164,6 +168,7 @@ export default {
 main {
     background-color: $bg_color_4;
     padding: 2rem 0;
+
     .icon {
         width: 5%;
         margin: auto;
@@ -178,10 +183,12 @@ main {
         width: fit-content;
         margin: auto;
     }
+
     .top-section {
         .top-section-title {
             background-color: $bg_color_010;
         }
+
         .time-line {
             padding: 3rem;
 
@@ -190,52 +197,58 @@ main {
                 text-align: center;
                 padding: 0.5rem 3rem;
                 color: $text_color_1;
-    
+
                 .title {
-                    font-family:$title-family;
+                    font-family: $title-family;
                     font-size: 1rem;
                     padding-bottom: 0.5rem;
                 }
-    
+
                 .text {
                     font-size: 0.75rem;
                 }
             }
-    
+
             .top {
                 @include flex (row, flex-end, flex-start);
             }
+
             .bottom {
                 @include flex (row, flex-start, flex-start);
+
                 .description {
                     width: 37.5%;
                     padding-left: 2rem;
                 }
             }
-    
+
         }
     }
+
     .bottom-section {
         padding-top: 2rem;
 
         .card-section {
-            @include flex(row, center ,center);
+            @include flex(row, center, center);
             gap: 1rem;
             padding-bottom: 5rem;
+
             .card {
-                @include flex(column, center ,center);
+                @include flex(column, center, center);
                 padding: 2rem 1rem 3rem;
                 width: 30%;
                 text-align: center;
                 box-shadow: 0 0 50px #4545457b;
+
                 .card-title {
                     font-size: 1.5rem;
                     font-family: $title-family;
                     color: text_color_5;
                 }
 
-                .date{
+                .date {
                     color: gray;
+
                     .icon-date {
                         margin-right: 0.5rem;
                     }
@@ -248,7 +261,8 @@ main {
                 .card-btn {
                     bottom: 0%;
                     left: 50%;
-                    transform: translate(-50%,50%);
+                    transform: translate(-50%, 50%);
+
                     button {
                         border-radius: 50px;
                         padding: 0.5rem 1rem;
@@ -268,7 +282,8 @@ main {
             text-align: center;
 
             button {
-                box-shadow: 0 0 20px #45454550;;
+                box-shadow: 0 0 20px #45454550;
+                ;
                 border: none;
                 border-radius: 50px;
                 background-color: $bg_color_3;
@@ -289,12 +304,10 @@ main {
 
 .bottom-wave {
     position: relative;
+
     img {
         position: relative;
         left: 0;
         top: -2px;
     }
-}
-
-
-</style>
+}</style>

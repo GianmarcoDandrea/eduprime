@@ -7,7 +7,7 @@ import AppSection5 from "./AppMainComponents/AppSection5.vue";
 import AppSection6 from "./AppMainComponents/AppSection6.vue";
 
 export default {
-    components: {AppSection1, AppSection2, AppSection3, AppSection4, AppSection5, AppSection6}        
+    components: { AppSection1, AppSection2, AppSection3, AppSection4, AppSection5, AppSection6 }
 }
 </script>
 
@@ -23,6 +23,4 @@ export default {
 <style lang="scss" scoped>
 @use "../style/partials/variables" as *;
 @use "../style/partials/mixins.scss" as *;
-
-    
 </style>

@@ -1,6 +1,6 @@
 <script>
 export default {
-            
+
 }
 </script>
 <template >
@@ -14,7 +14,9 @@ export default {
                 </div>
 
                 <div class="text">
-                    At EduPrime , it doesn't matter what domain you wish to pursue a carrer in. Here you can find a course that satisfies your needs within a click away and applies for a course in a matter of minutes. EduPrime is ranked as the most versatile university in the world, thanks to the numbers of courses it provides.
+                    At EduPrime , it doesn't matter what domain you wish to pursue a carrer in. Here you can find a course
+                    that satisfies your needs within a click away and applies for a course in a matter of minutes. EduPrime
+                    is ranked as the most versatile university in the world, thanks to the numbers of courses it provides.
                 </div>
 
                 <button class="rounded-5">
@@ -25,7 +27,7 @@ export default {
                 <img src="../../assets/img/Graduation-Illustration.png" alt="">
             </div>
 
-            
+
         </div>
     </div>
 </template>
@@ -50,6 +52,7 @@ export default {
             img {
                 width: 10%;
             }
+
             .title {
                 font-family: $title-family;
                 font-size: 2.5rem;
@@ -84,5 +87,4 @@ export default {
         }
     }
 }
-    
 </style>

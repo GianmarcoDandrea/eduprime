@@ -7,20 +7,20 @@ import AppFooter from "./components/AppFooter.vue";
 export default {
   data() {
     return {
-      headerNavItem : {
+      headerNavItem: {
         headerLinkMenu: [
-            "Home",
-            "Courses",
-            "About Us",
-            "News",
-            "Pages",
+          "Home",
+          "Courses",
+          "About Us",
+          "News",
+          "Pages",
         ],
-        headerLinkList : [
-            "Contact",
-            "Purchase"
+        headerLinkList: [
+          "Contact",
+          "Purchase"
         ],
       },
-      footerNavItem : {
+      footerNavItem: {
         getEduPrime: [
           "Request a website",
           "Browse Themes",
@@ -39,8 +39,8 @@ export default {
         ]
       }
     }
-},
-  components : {AppFooter, AppHeader, AppMain}
+  },
+  components: { AppFooter, AppHeader, AppMain }
 }
 
 </script>
@@ -49,11 +49,9 @@ export default {
   <a href="#AppHeader" class="back-to-top">
     <img src="../src/assets/img/back-to-top-arrow.svg" alt="">
   </a>
-  <AppHeader :item="headerNavItem" id="AppHeader"/>
+  <AppHeader :item="headerNavItem" id="AppHeader" />
   <AppMain />
-  <AppFooter :item="footerNavItem"/>
-
-
+  <AppFooter :item="footerNavItem" />
 </template>
 
 <style lang="scss">
@@ -72,6 +70,4 @@ export default {
   right: 20px;
   border-radius: 50%;
 }
-
-
 </style>

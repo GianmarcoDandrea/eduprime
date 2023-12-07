@@ -1,16 +1,16 @@
 <script>
-import {store} from "../store";
+import { store } from "../store";
 
 export default {
-    props : {
+    props: {
         item: Object,
     },
     data() {
-    return {
-        store,
-    };
-  },
-            
+        return {
+            store,
+        };
+    },
+
 }
 </script>
 
@@ -47,9 +47,9 @@ export default {
                 <div class="wrapper">
 
                     <div class="hero-title">
-                        Key To Your Success  
+                        Key To Your Success
                     </div>
-    
+
                     <div class="hero-text">
                         {{ store.eduPrimeDescription }}
                     </div>
@@ -77,7 +77,7 @@ export default {
                 <i class="fa-solid fa-cart-shopping"></i>
                 <i class="fa-solid fa-book-open"></i>
                 <i class="fa-solid fa-gear"></i>
-    
+
             </div>
         </div>
 
@@ -91,7 +91,6 @@ export default {
 
 
     </header>
-
 </template>
 
 <style lang="scss" scoped>
@@ -99,14 +98,14 @@ export default {
 @use "../style/partials/mixins" as *;
 
 // reset settings
-ul{
-margin:0;
+ul {
+    margin: 0;
 }
 
 header {
     background-image:
-    linear-gradient($bg_color_5, $bg_color_5,),
-    url(../assets/img/theme_slider2_bg-1.jpg);
+        linear-gradient($bg_color_5, $bg_color_5, ),
+        url(../assets/img/theme_slider2_bg-1.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     padding-top: 0.5rem;
@@ -115,41 +114,44 @@ header {
         font-family: $title-family;
         width: 90%;
         @include flex(row, space-between, center);
+
         .rigth-section {
             width: 20%
         }
 
         .left-section {
             @include flex(row, center, center);
+
             .link-list {
-                @include flex(row, center, center );
+                @include flex(row, center, center);
                 list-style-type: none;
                 font-size: 0.9rem;
-        
+
                 li {
                     margin: 0 0.65rem;
                 }
-                
+
                 a {
                     @include flex(row, center, center);
-                    color:$text_color_1;
+                    color: $text_color_1;
+
                     .fa-caret-down {
                         font-size: 0.5rem;
                         margin-left: 0.4rem;
                     }
                 }
-    
+
                 li:first-of-type a:first-child {
-                    color:$text_color_2;
-                }    
-                
+                    color: $text_color_2;
+                }
+
             }
 
             .view-btn {
                 font-size: 0.9rem;
                 margin-left: 1.5rem;
                 padding: 1rem 2rem;
-                color:$text_color_1;
+                color: $text_color_1;
                 background-color: $bg_color_3;
                 transition: all 0.3s;
                 border: none;
@@ -167,19 +169,23 @@ header {
 
     .hero {
         @include flex(row, center, center);
+
         .container {
             @include flex(column, center, center);
             margin-top: 3rem;
+
             .wrapper {
                 @include flex(column, center, center);
                 margin-top: 3rem;
                 width: 50%;
+
                 .hero-title {
                     margin-top: 3rem;
                     color: $text_color_1;
                     font-family: $title-family;
                     font-size: 3.5rem;
                 }
+
                 .hero-text {
                     padding-top: 1.5rem;
                     padding-bottom: 2rem;
@@ -194,11 +200,12 @@ header {
                     padding: 1rem 0;
                     gap: 2rem;
                     margin-bottom: 5rem;
+
                     button {
                         font-family: $title-family;
                         font-size: 0.9rem;
                         border: none;
-                        background-color: rgba(0,0,0,0);
+                        background-color: rgba(0, 0, 0, 0);
                         padding: 1.3rem 2.3rem;
                     }
 
@@ -250,16 +257,12 @@ header {
                 padding: 0.2rem;
                 bottom: 0;
                 left: 50%;
-                transform: 
-                translate(-50%, 50%)
-                rotate(45deg);
+                transform:
+                    translate(-50%, 50%) rotate(45deg);
                 background-color: $bg_color_8;
                 z-index: 0;
             }
 
         }
     }
-}
-
-    
-</style>
+}</style>

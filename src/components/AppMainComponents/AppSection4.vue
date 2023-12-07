@@ -3,26 +3,26 @@ export default {
     data() {
         return {
             latestCourses: [
-                {   
-                    icon:"Decisions-icon.png",
+                {
+                    icon: "Decisions-icon.png",
                     name: "Make Better Decisions",
                     teacher: "James Colins",
                     price: "$21.00"
                 },
                 {
-                    icon:"Speaker-icon.png",
+                    icon: "Speaker-icon.png",
                     name: "How to be a speaker",
                     teacher: "James Colins",
                     price: "Free"
                 },
                 {
-                    icon:"Network-icon.png",
+                    icon: "Network-icon.png",
                     name: "Network Introductions",
                     teacher: "James Colins",
-                    price: "Free"                   
+                    price: "Free"
                 },
                 {
-                    icon:"Brand-icon.png",
+                    icon: "Brand-icon.png",
                     name: "Brand Management",
                     teacher: "James Colins",
                     price: "Free"
@@ -31,12 +31,12 @@ export default {
             ]
         }
     },
-    
+
     methods: {
-    getImagePath(imageName) {
-        return new URL(`../../assets/img/${imageName}`, import.meta.url).href
+        getImagePath(imageName) {
+            return new URL(`../../assets/img/${imageName}`, import.meta.url).href
+        }
     }
-  }
 }
 </script>
 
@@ -67,7 +67,7 @@ export default {
                     <button class="rounded-5">
                         <i class="fa-regular fa-eye"></i>
                         <span>
-                             View Course
+                            View Course
                         </span>
                     </button>
                 </div>
@@ -86,7 +86,9 @@ export default {
                         </div>
 
                         <div class="text">
-                            EduPrime has gathered teachers from around the globe to brainstorm in order to facilitate the evaluation of our students. Every teacher from our university has an influence on how students are evaluated at his/her subject.
+                            EduPrime has gathered teachers from around the globe to brainstorm in order to facilitate the
+                            evaluation of our students. Every teacher from our university has an influence on how students
+                            are evaluated at his/her subject.
                         </div>
 
                         <button class="rounded-5">
@@ -113,7 +115,9 @@ export default {
                         </div>
 
                         <div class="text">
-                            EduPrime has gathered teachers from around the globe to brainstorm in order to facilitate the evaluation of our students. Every teacher from our university has an influence on how students are evaluated at his/her subject.
+                            EduPrime has gathered teachers from around the globe to brainstorm in order to facilitate the
+                            evaluation of our students. Every teacher from our university has an influence on how students
+                            are evaluated at his/her subject.
                         </div>
 
                         <button class="rounded-5">
@@ -124,7 +128,7 @@ export default {
             </div>
         </div>
 
-        
+
 
     </div>
 </template>
@@ -133,65 +137,70 @@ export default {
 @use "../../style/partials/variables" as *;
 @use "../../style/partials/mixins" as *;
 
-.container{
+.container {
     width: 85%;
     padding: 3rem 3rem;
 
     .section-title {
         font-size: 3rem;
-        font-family: $title-family; 
+        font-family: $title-family;
         padding: 4rem 0 4rem;
     }
+
     .card-section {
-        @include flex(row, center ,center);
+        @include flex(row, center, center);
         gap: 1.5rem;
         padding-bottom: 5rem;
 
         .card {
-            @include flex(column, center ,center);
+            @include flex(column, center, center);
             padding: 0rem 1rem 3rem;
             border: none;
             text-align: center;
             box-shadow: 0 0 50px #8a8a8a56;
-    
+
             .card-icon {
                 width: 35%;
                 padding: 2rem 0;
             }
+
             .card-title {
                 font-size: 1.3rem;
                 font-family: $title-family;
                 color: text_color_5;
             }
-    
+
             .teacher {
                 font-size: 1rem;
                 color: $text_color_4;
                 font-weight: bold;
+
                 .icon-teacher {
                     font-family: $text-family;
                     color: grey;
                     font-weight: lighter;
                 }
             }
-    
+
             .price {
                 padding-top: 0.5rem;
                 font-size: 1rem;
                 color: $text_color_4;
                 font-weight: bold;
+
                 .icon-price {
                     font-family: $text-family;
                     color: grey;
                     font-weight: lighter;
                 }
             }
+
             .card-btn {
                 width: 80%;
                 bottom: 0%;
                 left: 50%;
-                transform: translate(-50%,50%);
-    
+                transform: translate(-50%, 50%);
+
                 button {
                     width: 85%;
                     padding: 1rem 1rem;
@@ -199,13 +208,13 @@ export default {
                     border: none;
                     background-color: $bg_color_4;
                     color: $text_color_1;
-        
+
                     span {
                         font-family: $title-family;
                     }
                 }
             }
-        }        
+        }
     }
 
     .details-section {
@@ -221,6 +230,7 @@ export default {
                     img {
                         width: 15%;
                     }
+
                     .title {
                         font-family: $title-family;
                         font-size: 2.5rem;
@@ -260,6 +270,7 @@ export default {
             .container-fluid {
                 width: 75%;
                 @include flex(row, space-between, center);
+
                 .left-section {
                     width: 45%;
                 }
@@ -271,6 +282,7 @@ export default {
                     img {
                         width: 15%;
                     }
+
                     .title {
                         font-family: $title-family;
                         font-size: 2.5rem;
@@ -306,8 +318,4 @@ export default {
     }
 
 
-}
-
-
-    
-</style>
+}</style>

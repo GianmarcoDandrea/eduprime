@@ -1,7 +1,7 @@
 <script>
-import {store} from "../store"
+import { store } from "../store"
 export default {
-    props : {
+    props: {
         item: Object,
     },
     data() {
@@ -9,7 +9,7 @@ export default {
             store
         }
     },
-            
+
 }
 </script>
 
@@ -52,7 +52,7 @@ export default {
                             </a>
                         </li>
                     </ul>
-                    
+
                 </div>
 
                 <div class="right-section">
@@ -66,7 +66,7 @@ export default {
                     </ul>
                 </div>
             </div>
-            
+
             <div class="right-section w-33 px-2">
 
                 <div class="search w-75">
@@ -81,7 +81,7 @@ export default {
                         Search categories
                     </p>
                     <div class="badges">
-                        <div class="badge rounded-5" v-for="badge in store.categoriesList" >
+                        <div class="badge rounded-5" v-for="badge in store.categoriesList">
                             <a href="" class="text-decoration-none">
                                 {{ badge }}
                             </a>
@@ -115,6 +115,7 @@ export default {
 <style lang="scss" scoped>
 @use "../style/partials/variables" as *;
 @use "../style/partials/mixins.scss" as *;
+
 // COMMON
 .w-33 {
     width: calc(100% / 3);
@@ -125,14 +126,18 @@ main {
     background-color: $bg_color_4;
     padding-top: 3rem;
     padding-bottom: 4rem;
+
     .container-fluid {
         @include flex(row, center, flex-start);
         width: 75%;
+
         .left-section {
             @include flex(column, center, flex-start);
+
             .logo {
                 width: 60%;
             }
+
             .text {
                 padding: 2rem 0;
                 color: $text_color_1;
@@ -157,11 +162,12 @@ main {
                 }
 
             }
-    
+
         }
 
         .central-section {
             @include flex(row, center, center);
+
             .list-title {
                 font-family: $title-family;
                 font-size: 1.3rem;
@@ -172,12 +178,13 @@ main {
             li {
                 line-height: 2.4rem;
                 list-style-type: none;
+
                 a {
                     color: $text_color_1;
                     font-size: 0.9rem;
                 }
             }
-            
+
             .left-part {
                 width: 50%;
                 padding: 0 0.5rem;
@@ -191,7 +198,8 @@ main {
 
         .right-section {
             @include flex(column, center, flex-end);
-            .search{
+
+            .search {
                 background-color: $bg_color_1;
                 border-radius: 50px;
 
@@ -201,7 +209,7 @@ main {
                     border: none;
                     background-color: $bg_color_1;
                     outline: none;
-    
+
                     &:focus-visible {
                         border: none;
                         outline: none;
@@ -216,30 +224,31 @@ main {
                     background-color: $bg_color_3;
                     color: $text_color_1;
                 }
-            
+
             }
 
             .categories {
                 @include flex(column, center, flex-end);
-            
+
                 .categories-title {
                     color: $text_color_1;
                     font-family: $title-family;
                 }
 
                 .badges {
-                    @include flex(row, flex-end, center, wrap); 
+                    @include flex(row, flex-end, center, wrap);
                     gap: 0.5rem;
 
                     .badge {
                         padding: 0.5rem 0.5rem;
                         border: 1px solid $text_color_1;
+
                         a {
                             text-transform: uppercase;
                             color: $text_color_1;
                         }
                     }
-                    
+
                 }
             }
 
@@ -253,8 +262,8 @@ main {
         width: 10%;
         bottom: 30px;
         left: 30px;
-        
-        
+
+
         .menu-item {
             @include flex (row, flex-start, center);
             padding: 0.2rem 0.4rem;
@@ -263,7 +272,7 @@ main {
             border-radius: 3px;
             box-shadow: 0 5px 10px #2c2c2c;
             text-decoration: none;
-            
+
 
             img {
                 width: 9%;
@@ -276,5 +285,4 @@ main {
             }
         }
     }
-}    
-</style>
+}</style>

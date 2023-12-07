@@ -2,28 +2,28 @@
 import { store } from "../../store";
 export default {
     data() {
-    return {
-        store,
-        activeItem: 0,
-    };
-  },  
-
-  created() {
-    this.store.facultyActive = store.facultyList[0]
-  },
-  
-  methods: {
-    getImagePath(imageName) {
-        return new URL(`../../assets/img/${imageName}`, import.meta.url).href
+        return {
+            store,
+            activeItem: 0,
+        };
     },
 
-    changeFaculty(elem, i) {
-        this.activeItem = i,
-        console.log(store.facultyActive);
-        this.store.facultyActive = elem;
-    }
+    created() {
+        this.store.facultyActive = store.facultyList[0]
+    },
 
-  }       
+    methods: {
+        getImagePath(imageName) {
+            return new URL(`../../assets/img/${imageName}`, import.meta.url).href
+        },
+
+        changeFaculty(elem, i) {
+            this.activeItem = i,
+                console.log(store.facultyActive);
+            this.store.facultyActive = elem;
+        }
+
+    }
 }
 </script>
 
@@ -32,23 +32,20 @@ export default {
         <div class="container title">
             Faculties available at EduPrime
         </div>
-    
+
         <div class="subtitle">
             A single university with a load of courses, tailored to satisfy any student's need.
         </div>
 
         <div class="faculty-list ">
             <div class="wrapper">
-                <div class="faculty-card position-relative"
-                v-for="(card , i) in store.facultyList"
-                :key="i"
-                @click="changeFaculty(card , i)"
-                :class="{ active: i === activeItem}">
+                <div class="faculty-card position-relative" v-for="(card, i) in store.facultyList" :key="i"
+                    @click="changeFaculty(card, i)" :class="{ active: i === activeItem }">
 
                     <div class="card-image">
 
                         <img :src="getImagePath(card.image)" alt="" class="faculty-image">
-                        
+
                         <p class="faculty-name">
                             {{ card.name }}
                         </p>
@@ -63,10 +60,10 @@ export default {
             </div>
             <div class="right-section">
                 <div class="title">
-                    {{store.facultyActive.name}}
+                    {{ store.facultyActive.name }}
                 </div>
                 <div class="text">
-                    {{store.facultyActive.details}}
+                    {{ store.facultyActive.details }}
                 </div>
 
                 <button class="rounded-5">
@@ -79,7 +76,6 @@ export default {
         </div>
 
     </main>
-
 </template>
 
 <style lang="scss" scoped>
@@ -88,7 +84,7 @@ export default {
 
 main {
     margin-top: 5rem;
-    
+
     .title {
         font-family: $title-family;
         text-align: center;
@@ -106,26 +102,29 @@ main {
 
     .faculty-list {
         margin: 2rem 0;
-        @include flex(column,center,center);
+        @include flex(column, center, center);
         box-shadow: 0 0 8px lightgray;
+
         .wrapper {
-            @include flex(row,center, stretch);
+            @include flex(row, center, stretch);
             width: 65%;
+
             .faculty-card {
                 aspect-ratio: 1.75;
                 outline: 1px solid lightgray;
                 padding: 1rem 2rem;
-                
+
                 .faculty-image {
                     padding: 1.5rem;
                 }
-                
+
                 .faculty-name {
                     text-align: center;
                     font-family: $title-family;
                     color: $text_color_3;
                 }
             }
+
             .active {
                 background-color: $bg_color_4;
                 color: $text_color_1;
@@ -137,9 +136,8 @@ main {
                     padding: 0.8rem;
                     bottom: 0;
                     left: 50%;
-                    transform: 
-                    translate(-50%, 50%)
-                    rotate(45deg);
+                    transform:
+                        translate(-50%, 50%) rotate(45deg);
                     background-color: $bg_color_4;
                 }
 
@@ -147,27 +145,30 @@ main {
                     color: $text_color_1;
                     filter: brightness(100);
                 }
-        
+
                 & .faculty-name {
-                text-align: center;
-                font-family: $title-family;
-                color: $text_color_1;
+                    text-align: center;
+                    font-family: $title-family;
+                    color: $text_color_1;
+                }
+
             }
-        
-            }
-            
+
         }
     }
 
     .faculty-details {
-        @include flex(row,center,center);
+        @include flex(row, center, center);
         width: 55%;
         margin: auto;
-        .left-section{
+
+        .left-section {
             width: 50%;
         }
+
         .right-section {
             width: 50%;
+
             .text {
                 padding-top: 2rem;
                 color: $text_color_4;
@@ -190,7 +191,6 @@ main {
         height: 17.5vh;
         background-size: cover;
     }
-    
-}
 
+}
 </style>
