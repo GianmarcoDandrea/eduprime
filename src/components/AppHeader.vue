@@ -109,6 +109,7 @@ header {
     url(../assets/img/theme_slider2_bg-1.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    padding-top: 0.5rem;
 
     nav {
         font-family: $title-family;
